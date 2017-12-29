@@ -1,9 +1,14 @@
 const http = require('http');
 const url = require('url');
 
-const server = http.createServer().listen(process.env.NODE_PORT || 8080, process.env.NODE_IP || '0.0.0.0');
+const serverConfig = {
+    host: process.env.NODE_IP || '0.0.0.0',
+    port: process.env.NODE_PORT || 8080
+};
 
-console.log('server started: ' + server.address().address + ':' + server.address().port);
+const server = http.createServer().listen(serverConfig, () => {
+    console.log('server started', server.address());
+});
 
 server.on('request', (req, res) => {
 
