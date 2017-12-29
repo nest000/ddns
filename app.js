@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 
-const server = http.createServer().listen(process.env.NODE_PORT || 3000, process.env.NODE_IP || 'localhost');
+const server = http.createServer().listen(process.env.NODE_PORT || 8080, process.env.NODE_IP || 'localhost');
 
 server.on('request', (req, res) => {
 
