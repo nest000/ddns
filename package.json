@@ -1,0 +1,13 @@
+{
+  "name": "ddns",
+  "version": "0.0.1",
+  "description": "DDNS Updater",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
