@@ -3,6 +3,8 @@ const url = require('url');
 
 const server = http.createServer().listen(process.env.NODE_PORT || 8080, process.env.NODE_IP || 'localhost');
 
+console.log('server started: ' + server.address().address + ':' + server.address().port);
+
 server.on('request', (req, res) => {
 
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
