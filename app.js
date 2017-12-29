@@ -6,7 +6,9 @@ const serverConfig = {
     port: process.env.NODE_PORT || 8080
 };
 
-const server = http.createServer().listen(serverConfig, () => {
+const server = http.createServer();
+
+server.listen(serverConfig, () => {
     console.log('server started', server.address());
 });
 
