@@ -2,8 +2,8 @@ const http = require('http');
 const url = require('url');
 
 const serverConfig = {
-    host: process.env.NODE_IP || '0.0.0.0',
-    port: process.env.NODE_PORT || 8080
+    host: '0.0.0.0',
+    port: process.env.PORT || 8080
 };
 
 const server = http.createServer();
